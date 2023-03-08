@@ -91,15 +91,22 @@ The official documentation provides [details](https://github.com/ultralytics/yol
 python -m yolov5.train \
 --weights='yolov5s.pt' \
 --data='data/coco128.yaml' \
---epochs=1 \
---batch-size=8 \
+--epochs=300 \
+--batch-size=16 \
 --img=640 \
 --multi-scale \
 --optimizer='AdamW' \
 --project='training' \
 --name='coco128' \
 --cos-lr \
---save-period=1
+--save-period=1 \
+--cache
 ```
 Recommended - Refer the [Tips for Best Training Results](https://github.com/ultralytics/yolov5/wiki/Tips-for-Best-Training-Results) section to explore in-depth configurations for better training experiments.
 
+## Checking Evaluation Stats.
+The yolo API tracks the loss for each step and logs to tensorboard. It also gives evaluations stats which one can use to pick most relevant score confidence threshold at inference time. A few of the key plots are:
+* F1 vs score
+* PR vs score
+* Confusion metrics
+* Loss curves for train/val (helps to estimate overfitting)
