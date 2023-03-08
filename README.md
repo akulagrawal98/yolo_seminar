@@ -2,7 +2,6 @@
 An introduction to using the [ultralytics/yolov5](https://github.com/ultralytics/yolov5) repository for object detection.
 
 ## Scope
----
 This repository should only be considered as the minimal introduction for someone looking to use yolov5 for the following tasks.
 * Run inference on a set of sample images using one of the pretrained model.
 * Run training on a custom dataset.
@@ -14,7 +13,6 @@ Note: The official repository already has quite a good tutorial notebooks to sta
 * [Classification](https://github.com/ultralytics/yolov5/blob/master/classify/tutorial.ipynb)
 
 ## Setup
----
 We do not clone the yolov5 repository but rather use the [pypi package](https://pypi.org/project/yolov5/).
 
 Setup a virtual environment. I personally prefer the conda environment, create venv in conda using the below command.
@@ -27,7 +25,6 @@ pip install -r requirements.txt
 ```
 
 ## Downloading sample dataset
----
 We download a sample dataset provided by the ultralytics repository itself. A full list of datasets and scripts to download them are available [here](https://github.com/ultralytics/yolov5/tree/master/data).
 
 We will use the `coco128` dataset that contains 128 images from the coco dataset. In order to download the dataset to desired location, you may run the following command.
@@ -50,7 +47,6 @@ Please make sure that you change the `path` inside the yaml file to the absolute
 Please note that this config file is taken from the official repository directly.
 
 ## Running model inference
----
 In order to run the predictions on a set of images, the module provides a script which could be directly used with user configurable command line arguments.
 
 You need to choose a pretrained model checkpoint from the [table](https://github.com/ultralytics/yolov5#pretrained-checkpoints) of pretrained models that exist.
